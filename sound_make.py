@@ -3,6 +3,7 @@ from scipy.io.wavfile import write
 from scipy import signal as sg
 import os
 
+
 # Samples per second
 sps = 44100
 

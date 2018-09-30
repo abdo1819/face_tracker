@@ -10,7 +10,7 @@ def process(img):
     
     faces = face_cascade.detectMultiScale(gray,1.3,5)
     for(x,y,w,h) in faces:
-        cv2.rectangle(img,(x,y),(x+w, y+h),(255,0,0),2)
+        cv2.rectangle(img,(x,y),(x+w, y+h),(0,0,255),2)
 ##        roi_gray = gray[y:y+h , x:x+w]
 ##        roi_color = img[y:y+h , x:x+w]
 ##        eyes= eye_cascade.detectMultiScale(roi_gray,1.3,5)
@@ -21,11 +21,6 @@ def process(img):
 
 def track(img):
     print("sa")
-
-
-
-
-
 
 cap =cv2.VideoCapture(0)
 find=False
@@ -41,7 +36,7 @@ while (True):
  frame,faces = process(frame)
  if len(faces)==0:
      if find:
-         pass
+         cv2.imshow('vid',frame)
         #  a=old_faces[0,1]
         #  b=old_faces[0,2]
         #  c=old_faces[0,1]+old_faces[0,3]
